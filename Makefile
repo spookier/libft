@@ -6,7 +6,7 @@ CFLAGS = -Wall -Werror -Wextra
 # Mandatory files
 FILES =  ft_isalpha.c \
 
-
+# Transform .c files into .o
 OBJ_FILES = $(FILES:.c=.o)
 
 
@@ -26,7 +26,7 @@ fclean :
 	rm -rf *.o
 	rm -rf $(NAME)
 
-# Delete everything then run rebuild
+# Delete everything then rebuild
 re : fclean all
 
 .PHONY : all clean fclean re

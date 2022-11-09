@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acostin <acostin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 09:11:40 by acostin           #+#    #+#             */
-/*   Updated: 2022/11/09 10:05:04 by acostin          ###   ########.fr       */
+/*   Created: 2022/11/09 14:56:54 by acostin           #+#    #+#             */
+/*   Updated: 2022/11/09 15:10:06 by acostin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+void ft_bzero(void *s, size_t n)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
+	   size_t i;
+
+	   i = 0;
+	   while(i < n)
+	   {
+		((unsigned char *)s)[i] = (unsigned char)0;
+		i++;
+	   }
 }

@@ -6,47 +6,29 @@
 /*   By: acostin <acostin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 16:01:54 by acostin           #+#    #+#             */
-/*   Updated: 2022/11/10 18:08:59 by acostin          ###   ########.fr       */
+/*   Updated: 2022/11/10 21:06:24 by acostin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* str: The string from which to create the substring.
-
-start: The start index of the substring in the
-string ’s’.
-
-len: The maximum length of the substring.
-
-
-Allocates (with malloc(3)) and returns a substring
-from the string ’s’.
-The substring begins at index ’start’ and is of
-maximum size ’len’.
-
-RETURN:
-The substring.
-NULL if the allocation fails. */
-
-char *ft_substr(char const *str, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *substr;
-	size_t i;
+	size_t	s_size;
+	char	*sub_str;
 
-	if(len >= __SIZE_MAX__ || str == NULL)
-		return(NULL);
-
-	substr = (char *)malloc((len + 1) * sizeof(char));
-	if(!substr)
-		return(NULL);
-
-	i = 0;
-	while (i < len && str[start + i])
-	{
-		substr[i] = str[start + i];
-		i++;
-	}
-	substr[i] = '\0';
-	return(substr);
+	if(len >= __SIZE_MAX__)
+ 		return(NULL);
+	if (s == NULL)
+		return (NULL);
+	s_size = (unsigned int)ft_strlen(s);
+	if (s_size < start)
+		return (ft_strdup(""));
+	if (ft_strlen(s + start) < len)
+		len = ft_strlen(s + start);
+	sub_str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!sub_str)
+		return (NULL);
+	ft_strlcpy(sub_str, s + start, len + 1);
+	return (sub_str);
 }

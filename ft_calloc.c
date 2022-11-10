@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acostin <acostin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/09 16:12:47 by acostin           #+#    #+#             */
-/*   Updated: 2022/11/10 07:08:53 by acostin          ###   ########.fr       */
+/*   Created: 2022/11/10 13:50:44 by acostin           #+#    #+#             */
+/*   Updated: 2022/11/10 14:22:22 by acostin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcpy(char *dst, const char *src, size_t size)
+void *ft_calloc(size_t num, size_t size)
 {
-	size_t	i;
-	size_t	result;
-
-	i = 0;
-	result = ft_strlen(src);
-	if (size != 0)
-	{
-		while (src[i] && i < (size - 1))
-		{
-			dst[i] = src[i];
-			i++;
-		}
-		dst[i] = 0;
-	}
-	return (result);
+	
 }

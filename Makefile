@@ -6,7 +6,7 @@
 #    By: acostin <acostin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/09 14:13:22 by acostin           #+#    #+#              #
-#    Updated: 2022/11/10 16:02:09 by acostin          ###   ########.fr        #
+#    Updated: 2022/11/10 23:16:03 by acostin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,9 @@ FILES = ft_isalpha.c \
 	ft_calloc.c \
 	ft_strdup.c \
 	ft_substr.c \
+	ft_strjoin.c \
+	ft_strtrim.c \
+	
 	
 # Transform .c files into .o
 OBJ_FILES = $(FILES:.c=.o)

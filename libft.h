@@ -6,7 +6,7 @@
 /*   By: acostin <acostin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:13:24 by acostin           #+#    #+#             */
-/*   Updated: 2022/11/13 18:48:06 by acostin          ###   ########.fr       */
+/*   Updated: 2022/11/14 23:31:34 by acostin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
 char 		*ft_strnstr(const char *big, const char *little, size_t len);
 char 		*ft_strdup(const char *str);
-char 		*ft_substr(char const *s, unsigned int start, size_t len);
+char 		*ft_substr(char const *str, unsigned int start, size_t len);
 char 		*ft_strjoin(char const *s1, char const *s2);
 char 		*ft_strtrim(char const *s1, char const *set);
 char 		**ft_split(char const *str, char c);

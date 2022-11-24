@@ -6,7 +6,7 @@
 /*   By: acostin <acostin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 06:08:00 by acostin           #+#    #+#             */
-/*   Updated: 2022/11/24 10:01:09 by acostin          ###   ########.fr       */
+/*   Updated: 2022/11/24 16:00:52 by acostin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	
+	printf("test");	
 }
 
 

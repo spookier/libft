@@ -6,7 +6,7 @@
 #    By: acostin <acostin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/09 14:13:22 by acostin           #+#    #+#              #
-#    Updated: 2022/11/23 15:23:31 by acostin          ###   ########.fr        #
+#    Updated: 2022/11/24 06:08:45 by acostin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ FILES = ft_isalpha.c \
 	ft_strtrim.c \
 	ft_split.c \
 	ft_itoa.c \
+	ft_strmapi.c \
 	
 	
 # Transform .c files into .o

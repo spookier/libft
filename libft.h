@@ -6,7 +6,7 @@
 /*   By: acostin <acostin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:13:24 by acostin           #+#    #+#             */
-/*   Updated: 2022/11/23 15:23:14 by acostin          ###   ########.fr       */
+/*   Updated: 2022/11/24 06:08:31 by acostin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,7 @@ char 		*ft_strjoin(char const *s1, char const *s2);
 char 		*ft_strtrim(char const *s1, char const *set);
 char 		**ft_split(char const *str, char c);
 char 		*ft_itoa(int n);
+char 		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
 
 #endif

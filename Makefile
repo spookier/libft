@@ -6,7 +6,7 @@
 #    By: acostin <acostin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/09 14:13:22 by acostin           #+#    #+#              #
-#    Updated: 2022/11/24 17:20:35 by acostin          ###   ########.fr        #
+#    Updated: 2022/11/26 00:40:33 by acostin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,11 +49,18 @@ FILES = ft_isalpha.c \
 	ft_putchar_fd.c \
 	ft_putstr_fd.c \
 	ft_putendl_fd.c \
-	
+	ft_putnbr_fd.c \
+
+
+# Bonus files
+FILES_BONUS = ft_lstnew.c \
+
+
 
 
 # Transform .c files into .o
 OBJ_FILES = $(FILES:.c=.o)
+OBJ_BONUS = $(FILES_BONUS:.c=.o)
 
 all : $(NAME)
 
@@ -61,6 +68,13 @@ $(NAME) :
 	$(CC) $(CFLAGS) -c $(FILES)
 	ar rc $(NAME) $(OBJ_FILES)
 	ranlib $(NAME)
+
+
+bonus :
+	$(CC) $(CFLAGS) -c $(FILES_BONUS)
+	ar rc $(NAME) $(OBJ_BONUS)
+	ranlib $(NAME)
+	
 
 # Clean all object files created
 clean : 
@@ -71,7 +85,10 @@ fclean :
 	rm -rf *.o
 	rm -rf $(NAME)
 
+fcleanall : fclean
+	rm -rf $(OBJ_BONUS)
+
 # Delete everything then rebuild
 re : fclean all
 
-.PHONY : all clean fclean re
+.PHONY : all clean fclean re bonus

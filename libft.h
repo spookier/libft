@@ -6,7 +6,7 @@
 /*   By: acostin <acostin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:13:24 by acostin           #+#    #+#             */
-/*   Updated: 2022/11/24 17:15:45 by acostin          ###   ########.fr       */
+/*   Updated: 2022/11/26 00:35:54 by acostin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+
+
+typedef struct	s_list
+{
+void			*content;
+struct s_list	*next;
+}	t_list;
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
 int			ft_isalnum(int c);
@@ -38,6 +45,7 @@ void 		ft_striteri(char *s, void (*f)(unsigned int, char*));
 void 		ft_putchar_fd(char c, int fd);
 void 		ft_putstr_fd(char *s, int fd);
 void 		ft_putendl_fd(char *s, int fd);
+void 		ft_putnbr_fd(int n, int fd);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
 char 		*ft_strnstr(const char *big, const char *little, size_t len);
@@ -48,7 +56,6 @@ char 		*ft_strtrim(char const *s1, char const *set);
 char 		**ft_split(char const *str, char c);
 char 		*ft_itoa(int n);
 char 		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-
 
 
 #endif

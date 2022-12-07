@@ -6,14 +6,14 @@
 /*   By: acostin <acostin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 23:33:29 by acostin           #+#    #+#             */
-/*   Updated: 2022/11/26 00:18:37 by acostin          ###   ########.fr       */
+/*   Updated: 2022/12/10 15:38:08 by acostin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "unistd.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
 	{

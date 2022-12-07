@@ -6,7 +6,7 @@
 /*   By: acostin <acostin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 17:08:00 by acostin           #+#    #+#             */
-/*   Updated: 2022/11/24 17:18:16 by acostin          ###   ########.fr       */
+/*   Updated: 2022/12/10 15:38:32 by acostin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	size_t i;
-	
+	size_t	i;
+
 	i = 0;
-	while(s[i])
+	while (s[i])
 	{
 		write(fd, &s[i], 1);
 		i++;

@@ -6,7 +6,7 @@
 /*   By: acostin <acostin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 15:39:08 by acostin           #+#    #+#             */
-/*   Updated: 2022/11/09 16:08:18 by acostin          ###   ########.fr       */
+/*   Updated: 2022/12/10 15:36:52 by acostin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 {
 	unsigned char	*dest;
 	unsigned char	*source;
-	size_t	i;
+	size_t			i;
 
 	dest = (unsigned char *)dst;
 	source = (unsigned char *)src;
@@ -36,5 +36,5 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 		while (0 < n--)
 			dest[n] = source[n];
 	}
-	return(dest);
+	return (dest);
 }

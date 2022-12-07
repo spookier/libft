@@ -6,14 +6,14 @@
 /*   By: acostin <acostin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 17:06:28 by acostin           #+#    #+#             */
-/*   Updated: 2022/11/24 17:18:22 by acostin          ###   ########.fr       */
+/*   Updated: 2022/12/10 15:37:52 by acostin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "unistd.h"
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }

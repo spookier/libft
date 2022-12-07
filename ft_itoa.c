@@ -6,16 +6,16 @@
 /*   By: acostin <acostin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 15:24:14 by acostin           #+#    #+#             */
-/*   Updated: 2022/11/23 20:29:13 by acostin          ###   ########.fr       */
+/*   Updated: 2022/12/10 15:34:51 by acostin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-static int calc_size(int n)
+static int	calc_size(int n)
 {
-	int size;
+	int	size;
 
 	size = 0;
 	if (n <= 0)
@@ -31,7 +31,7 @@ static int calc_size(int n)
 	return (size);
 }
 
-static void fill_positive_tab(char *str, int size, int n)
+static void	fill_positive_tab(char *str, int size, int n)
 {
 	str[size] = 0;
 	while (size - 1 >= 0)
@@ -42,7 +42,7 @@ static void fill_positive_tab(char *str, int size, int n)
 	}
 }
 
-static void fill_negative_tab(char *str, int size, int n)
+static void	fill_negative_tab(char *str, int size, int n)
 {
 	n = n * -1;
 	while (size - 1 >= 0)
@@ -54,7 +54,7 @@ static void fill_negative_tab(char *str, int size, int n)
 	str[0] = '-';
 }
 
-static void fill_min_int(char *str)
+static void	fill_min_int(char *str)
 {
 	str[0] = '-';
 	str[1] = '2';
@@ -70,16 +70,16 @@ static void fill_min_int(char *str)
 	str[11] = 0;
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *res;
-	int size;
+	char	*res;
+	int		size;
 
-	if(n == -2147483648)
+	if (n == -2147483648)
 	{
 		res = malloc(12 * sizeof(char));
 		if (!res)
-		return (NULL);
+			return (NULL);
 		fill_min_int(res);
 		return (res);
 	}
@@ -88,13 +88,9 @@ char *ft_itoa(int n)
 	if (!res)
 		return (NULL);
 	res[size] = 0;
-	if(n >= 0)
+	if (n >= 0)
 		fill_positive_tab(res, size, n);
 	else
 		fill_negative_tab(res, size, n);
 	return (res);
 }
-
-
-
-

@@ -6,7 +6,7 @@
 #    By: acostin <acostin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/09 14:13:22 by acostin           #+#    #+#              #
-#    Updated: 2022/11/26 00:40:33 by acostin          ###   ########.fr        #
+#    Updated: 2022/12/07 15:55:50 by acostin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,10 +53,15 @@ FILES = ft_isalpha.c \
 
 
 # Bonus files
-FILES_BONUS = ft_lstnew.c \
-
-
-
+FILES_BONUS = 	ft_lstnew.c \
+				ft_lstadd_front.c \
+				ft_lstsize.c \
+				ft_lstlast.c \
+				ft_lstadd_back.c \
+				ft_lstdelone.c \
+				ft_lstclear.c \
+				ft_lstiter.c \
+				ft_lstmap.c \
 
 # Transform .c files into .o
 OBJ_FILES = $(FILES:.c=.o)

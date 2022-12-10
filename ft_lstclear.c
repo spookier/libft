@@ -6,20 +6,20 @@
 /*   By: acostin <acostin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 12:03:18 by acostin           #+#    #+#             */
-/*   Updated: 2022/12/07 12:33:45 by acostin          ###   ########.fr       */
+/*   Updated: 2022/12/10 15:30:47 by acostin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-void ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *curr;
-	t_list *temp;
+	t_list	*curr;
+	t_list	*temp;
 
 	if (*lst == NULL)
-		return;
+		return ;
 	curr = *lst;
 	while (curr)
 	{

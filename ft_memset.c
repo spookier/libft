@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: acostin <acostin@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/10 15:37:14 by acostin           #+#    #+#             */
+/*   Updated: 2022/12/10 15:37:15 by acostin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 /* The memset() function fills the first n bytes of the memory area
 pointed to by s with the constant byte c.

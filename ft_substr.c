@@ -6,7 +6,7 @@
 /*   By: acostin <acostin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 16:01:54 by acostin           #+#    #+#             */
-/*   Updated: 2022/12/10 15:53:27 by acostin          ###   ########.fr       */
+/*   Updated: 2022/12/14 18:02:45 by acostin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	if (start >= ft_strlen(str))
 	{
 		tab = malloc(1);
+		if (!tab)
+			return (NULL);
 		tab[0] = 0;
 		return (tab);
 	}

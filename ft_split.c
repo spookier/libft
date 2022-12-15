@@ -6,12 +6,24 @@
 /*   By: acostin <acostin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 06:07:33 by acostin           #+#    #+#             */
-/*   Updated: 2022/12/10 15:40:09 by acostin          ###   ########.fr       */
+/*   Updated: 2022/12/15 17:51:35 by acostin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
+
+static void	free_tab(char **tab)
+{
+	int	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		free (tab[i]);
+		i++;
+	}
+	free (tab);
+}
 
 static size_t	calc_2dsize(char const *str, char c)
 {
@@ -34,7 +46,7 @@ static size_t	calc_2dsize(char const *str, char c)
 	return (size);
 }
 
-static void	alloc_tab(char const *str, char **tab, char c)
+static int	alloc_tab(char const *str, char **tab, char c)
 {
 	size_t	i;
 	size_t	j;
@@ -48,12 +60,18 @@ static void	alloc_tab(char const *str, char **tab, char c)
 		else
 		{
 			tab[j] = ft_substr(str, i, ft_strchr(str + i, c) - (str + i));
+			if (!tab[j])
+			{
+				free_tab(tab);
+				return (1);
+			}
 			j++;
 			while (str[i] && str[i] != c)
 				i++;
 		}
 	}
 	tab[j] = NULL;
+	return (0);
 }
 
 char	**ft_split(char const *str, char c)
@@ -66,6 +84,7 @@ char	**ft_split(char const *str, char c)
 	tab = malloc(sizeof(char *) * (calc_2dsize(str, c) + 1));
 	if (!tab)
 		return (NULL);
-	alloc_tab(str, tab, c);
+	if (alloc_tab(str, tab, c) == 1)
+		return (NULL);
 	return (tab);
 }

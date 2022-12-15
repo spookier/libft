@@ -6,7 +6,7 @@
 #    By: acostin <acostin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/09 14:13:22 by acostin           #+#    #+#              #
-#    Updated: 2022/12/14 01:06:17 by acostin          ###   ########.fr        #
+#    Updated: 2022/12/15 18:02:38 by acostin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,7 @@ OBJ_BONUS = $(FILES_BONUS:.c=.o)
 
 all : $(NAME)
 
-$(NAME) :
+$(NAME) : $(OBJ_FILES)
 	$(CC) $(CFLAGS) -c $(FILES)
 	ar rc $(NAME) $(OBJ_FILES)
 	ranlib $(NAME)
@@ -83,17 +83,15 @@ bonus :
 
 # Clean all object files created
 clean : 
-	rm -rf *.o
-
-# Clean all object files + the library created
-fclean : 
-	rm -rf *.o
-	rm -rf $(NAME)
-
-fcleanall : fclean
+	rm -rf $(OBJ_FILES)
 	rm -rf $(OBJ_BONUS)
 
+# Clean all object files + the library created
+fclean : clean
+	rm -rf $(NAME)
+
 # Delete everything then rebuild
-re : fclean all
+re : fclean
+	make all
 
 .PHONY : all clean fclean re bonus

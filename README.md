@@ -2,8 +2,16 @@
 # libft
 
 Libft is a library of useful functions written in C, designed to help you write your own programs more quickly and efficiently
+It involves recoding several functions from the standard C library, as well as implementing new functions
 
 It includes implementations of common functions like strlen, strcpy, memset, and atoi, as well as some more specialized functions like linked list manipulation and string formatting
+
+
+The Libft project is divided into three main parts:
+
+1. Part 1: Recode several functions from the standard C library, including functions for manipulating strings, memory, and characters
+2. Part 2: Implement additional functions that are not part of the standard library, such as functions for manipulating linked lists, binary trees, and other data structures
+3. Bonus: Implement additional functions that are not required for the project but demonstrate advanced programming skills, such as functions for parsing command-line arguments or working with regular expressions
 
 ## Installation
 
@@ -28,11 +36,11 @@ To use libft in your own programs, include the appropriate header files and link
 int main(void)
 {
     char *str = "Hello, world!";
-    ft_putstr(str);
+    ft_putstr(str, 1);
     return 0;
 }
 ```
-This program uses the ft_putstr function from libft to print a string to the console
+This program uses the ft_putstr_fd function from libft to print a string to the file descriptor 1
 
 To compile your project with libft, add -L /path/to/libft -lft to your compiler flags
 
